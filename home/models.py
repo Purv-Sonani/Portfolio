@@ -22,6 +22,7 @@ class ContactInfo(SingletonModel):
     email = models.EmailField()
     github_url = models.URLField(blank=True, null=True)
     linkedin_url = models.URLField(blank=True, null=True)
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
 
     class Meta:
         verbose_name = "Contact Info"

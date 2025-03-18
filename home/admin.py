@@ -18,7 +18,7 @@ class AboutAdmin(SingletonAdmin):
 
 @admin.register(ContactInfo)
 class ContactInfoAdmin(SingletonAdmin):
-    list_display = ['email', 'github_url', 'linkedin_url']
+    list_display = ['email', 'github_url', 'linkedin_url', 'phone_number']
 
 # admin.site.register(Profile)
 # admin.site.register(ContactInfo)
