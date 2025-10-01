@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/odometer-theme-default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<header class="cs_site_header cs_style_1 cs_sticky_header cs_color_2">
+    <div class="cs_main_header">
+        <div class="container">
+            <div class="cs_main_header_in">
+                <div class="cs_main_header_left">
+                    <a class="cs_site_branding" href="/">
+                        <img src="{% static 'img/logo2.svg' %}" alt="Logo">
+                    </a>
+                </div>
+                <div class="cs_main_header_center">
+                    <div class="cs_nav">
+                        <ul class="cs_nav_list">
+                            <li class="menu-item-has-children"><a href="/home">Home</a>
+
+                            </li>
+                            <li class="menu-item-has-children"><a href="/about">About</a>
+
+                            </li>
+                            <!--                            <li class="menu-item-has-children"><a href="#">Portfolio</a>-->
+
+                            <!--                            </li>-->
+                            <!--                            <li class="menu-item-has-children"><a href="#">Pages</a>-->
+
+                            <!--                            </li>-->
+                            <!--                            <li class="menu-item-has-children"><a href="blog.html">Blog</a>-->
+
+                            <!--                            </li>-->
+                            <li class="active menu-item-has-children"><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--                <div class="cs_main_header_right">-->
+                <!--                    <a href="contact.html" class="cs_btn cs_style_1 cs_primary_font"><span>Hire Me</span></a>-->
+                <!--                </div>-->
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Header Section -->
+
+    <!-- Start Hero Section -->
+    <section class="cs_hero cs_style_3 cs_filled_bg cs_center text-center"
+             data-src="{% static 'img/bg/hero_bg_4.svg' %}">
+        <div class="container">
+<!--            <div class="cs_height_45 cs_height_lg_45"></div>-->
+            <h1 class="cs_hero_title cs_font_92 cs_black wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                <span class="cs_gradient_text">Contact </span><span
+                    class="cs_gradient_border_text">Me</span></h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Contact</li>
+            </ol>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <div class="container">
+        <div class="contact-sections">
+            <div class="section">
+                <h2>Articles</h2>
+                <p>Check out my latest articles on various topics including web development, design, and technology trends.</p>
+            </div>
+            <div class="section">
+                <h2>FAQs</h2>
+                <p>Find answers to common questions about my services, pricing, and working process.</p>
+            </div>
+            <div class="section">
+                <h2>Direct Email</h2>
+                <p>You can reach me directly at: <strong>contact@example.com</strong></p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<footer class="cs_footer cs_style_1 cs_filled_bg position-relative" data-src="{% static 'img/bg/footer_bg.svg' %}">
+    <div class="position-absolute cs_footer_shape_1">
+        <img src="{% static 'img/footer_shape' %}" alt="">
+    </div>
+    <div class="container">
+        <div class="cs_footer_cta">
+            <h2 class="cs_font_92 cs_gradient_text_2 cs_semi_bold">Have a project?</h2>
+            <a href="contact.html" class="cs_btn cs_style_1 cs_primary_font"><span>Let’s
+            Talk</span></a>
+        </div>
+        <div class="cs_copyright">© 2025. All rights reserved</div>
+    </div>
+</footer>
+
+<script src="{% static 'js/plugins/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/plugins/gsap.min.js' %}"></script>
+<script src="{% static 'js/plugins/isotope.pkg.min.js' %}"></script>
+<script src="{% static 'js/plugins/odometer.min.js' %}"></script>
+<script src="{% static 'js/plugins/wow.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Contact Us</title>-->
+<!--    &lt;!&ndash; Tailwind CSS CDN &ndash;&gt;-->
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+<!--    &lt;!&ndash; Font Awesome for icons &ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">&ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'css/plugins/odometer-theme-default.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'css/plugins/select2.min.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'css/plugins/animate.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; Start Header Section &ndash;&gt;-->
+<!--<header class="cs_site_header cs_style_1 cs_sticky_header cs_color_2">-->
+<!--    <div class="cs_main_header">-->
+<!--        <div class="container">-->
+<!--            <div class="cs_main_header_in">-->
+<!--                <div class="cs_main_header_left">-->
+<!--                    <a class="cs_site_branding" href="/">-->
+<!--                        <img src="{% static 'img/logo2.svg' %}" alt="Logo">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="cs_main_header_center">-->
+<!--                    <div class="cs_nav">-->
+<!--                        <ul class="cs_nav_list">-->
+<!--                            <li class="menu-item-has-children"><a href="/home">Home</a>-->
+
+<!--                            </li>-->
+<!--                            <li class="menu-item-has-children"><a href="/about">About</a>-->
+
+<!--                            </li>-->
+<!--                            &lt;!&ndash;                            <li class="menu-item-has-children"><a href="#">Portfolio</a>&ndash;&gt;-->
+
+<!--                            &lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            <li class="menu-item-has-children"><a href="#">Pages</a>&ndash;&gt;-->
+
+<!--                            &lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            <li class="menu-item-has-children"><a href="blog.html">Blog</a>&ndash;&gt;-->
+
+<!--                            &lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                            <li class="active menu-item-has-children"><a href="/contact">Contact</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;                <div class="cs_main_header_right">&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <a href="contact.html" class="cs_btn cs_style_1 cs_primary_font"><span>Hire Me</span></a>&ndash;&gt;-->
+<!--                &lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
+<!--&lt;!&ndash; End Header Section &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Start Hero Section &ndash;&gt;-->
+<!--    <section class="cs_hero cs_style_3 cs_filled_bg cs_center text-center"-->
+<!--             data-src="{% static 'img/bg/hero_bg_4.svg' %}">-->
+<!--        <div class="container">-->
+<!--&lt;!&ndash;            <div class="cs_height_45 cs_height_lg_45"></div>&ndash;&gt;-->
+<!--            <h1 class="cs_hero_title cs_font_92 cs_black wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">-->
+<!--                <span class="cs_gradient_text">Contact </span><span-->
+<!--                    class="cs_gradient_border_text">Me</span></h1>-->
+<!--            <ol class="breadcrumb">-->
+<!--                <li class="breadcrumb-item"><a href="/">Home</a></li>-->
+<!--                <li class="breadcrumb-item active">Contact</li>-->
+<!--            </ol>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; End Hero Section &ndash;&gt;-->
+
+<!--&lt;!&ndash; Hero Section &ndash;&gt;-->
+<!--<section class="py-16 bg-white shadow-md">-->
+<!--    <div class="container mx-auto px-4">-->
+<!--            <h1 class="text-3xl font-bold text-center text-indigo-600 mb-8">-->
+<!--                <i class="fa-solid fa-envelope mr-2"></i> Let's Talk-->
+<!--            </h1>-->
+<!--        &lt;!&ndash; Contact Form &ndash;&gt;-->
+<!--        <div class="max-w-md mx-auto bg-white rounded-lg p-8">-->
+<!--            <form id="contactForm" class="space-y-6">-->
+<!--                &lt;!&ndash; Name Field &ndash;&gt;-->
+<!--                <div>-->
+<!--                    <label for="name" class="block text-gray-700 font-medium mb-2">-->
+<!--                        <i class="fa-solid fa-user mr-1"></i> Full Name-->
+<!--                    </label>-->
+<!--                    <input type="text" id="name" name="name"-->
+<!--                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"-->
+<!--                           placeholder="John Doe" required>-->
+<!--                    <p class="text-red-500 text-sm hidden" id="nameError"></p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Email Field &ndash;&gt;-->
+<!--                <div>-->
+<!--                    <label for="email" class="block text-gray-700 font-medium mb-2">-->
+<!--                        <i class="fa-solid fa-envelope mr-1"></i> Email Address-->
+<!--                    </label>-->
+<!--                    <input type="email" id="email" name="email"-->
+<!--                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"-->
+<!--                           placeholder="john@example.com" required>-->
+<!--                    <p class="text-red-500 text-sm hidden" id="emailError"></p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Subject Field &ndash;&gt;-->
+<!--                <div>-->
+<!--                    <label for="subject" class="block text-gray-700 font-medium mb-2">-->
+<!--                        <i class="fa-solid fa-tag mr-1"></i> Subject-->
+<!--                    </label>-->
+<!--                    <input type="text" id="subject" name="subject"-->
+<!--                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"-->
+<!--                           placeholder="Your Message Subject" required>-->
+<!--                    <p class="text-red-500 text-sm hidden" id="subjectError"></p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Message Field &ndash;&gt;-->
+<!--                <div>-->
+<!--                    <label for="message" class="block text-gray-700 font-medium mb-2">-->
+<!--                        <i class="fa-solid fa-pencil mr-1"></i> Message-->
+<!--                    </label>-->
+<!--                    <textarea id="message" name="message" rows="4"-->
+<!--                              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"-->
+<!--                              placeholder="Your message here..." required></textarea>-->
+<!--                    <p class="text-red-500 text-sm hidden" id="messageError"></p>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Submit Button &ndash;&gt;-->
+<!--                <button type="submit"-->
+<!--                        class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition duration-200">-->
+<!--                    <i class="fa-solid fa-paper-plane mr-2"></i> Send Message-->
+<!--                </button>-->
+<!--            </form>-->
+<!--            <div id="successMessage" class="hidden text-center text-green-600 mt-4">-->
+<!--                <i class="fa-solid fa-check-circle mr-2"></i> Message Sent Successfully!-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; Start Footer &ndash;&gt;-->
+<!--<footer class="cs_footer cs_style_1 cs_filled_bg position-relative" data-src="{% static 'img/bg/footer_bg.svg' %}">-->
+<!--    <div class="position-absolute cs_footer_shape_1">-->
+<!--        <img src="{% static 'img/footer_shape' %}" alt="">-->
+<!--    </div>-->
+<!--    <div class="container">-->
+<!--        <div class="cs_footer_cta">-->
+<!--            <h2 class="cs_font_92 cs_gradient_text_2 cs_semi_bold">Have a project?</h2>-->
+<!--            <a href="contact.html" class="cs_btn cs_style_1 cs_primary_font"><span>Let’s-->
+<!--            Talk</span></a>-->
+<!--        </div>-->
+<!--        <div class="cs_copyright">© 2025. All rights reserved</div>-->
+<!--    </div>-->
+<!--</footer>-->
+<!--&lt;!&ndash; End Footer &ndash;&gt;-->
+
+<!--&lt;!&ndash; JavaScript for Validation &ndash;&gt;-->
+<!--<script>-->
+<!--    document.getElementById('contactForm').addEventListener('submit', function(e) {-->
+<!--        e.preventDefault();-->
+<!--        const name = document.getElementById('name').value;-->
+<!--        const email = document.getElementById('email').value;-->
+<!--        const subject = document.getElementById('subject').value;-->
+<!--        const message = document.getElementById('message').value;-->
+<!--        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;-->
+
+<!--        // Clear previous errors-->
+<!--        document.querySelectorAll('.text-red-500').forEach(p => p.classList.add('hidden'));-->
+
+<!--        let isValid = true;-->
+
+<!--        if (name.trim() === '') {-->
+<!--            document.getElementById('nameError').textContent = 'Name is required';-->
+<!--            document.getElementById('nameError').classList.remove('hidden');-->
+<!--            isValid = false;-->
+<!--        }-->
+
+<!--        if (!emailPattern.test(email)) {-->
+<!--            document.getElementById('emailError').textContent = 'Invalid email format';-->
+<!--            document.getElementById('emailError').classList.remove('hidden');-->
+<!--            isValid = false;-->
+<!--        }-->
+
+<!--        if (subject.trim() === '') {-->
+<!--            document.getElementById('subjectError').textContent = 'Subject is required';-->
+<!--            document.getElementById('subjectError').classList.remove('hidden');-->
+<!--            isValid = false;-->
+<!--        }-->
+
+<!--        if (message.trim() === '') {-->
+<!--            document.getElementById('messageError').textContent = 'Message is required';-->
+<!--            document.getElementById('messageError').classList.remove('hidden');-->
+<!--            isValid = false;-->
+<!--        }-->
+
+<!--        if (isValid) {-->
+<!--            // Simulate successful submission-->
+<!--            this.reset();-->
+<!--            document.getElementById('successMessage').classList.remove('hidden');-->
+<!--            setTimeout(() => {-->
+<!--                document.getElementById('successMessage').classList.add('hidden');-->
+<!--            }, 3000);-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+<!--<script src="{% static 'js/plugins/jquery-3.6.0.min.js' %}"></script>-->
+<!--<script src="{% static 'js/plugins/gsap.min.js' %}"></script>-->
+<!--<script src="{% static 'js/plugins/isotope.pkg.min.js' %}"></script>-->
+<!--<script src="{% static 'js/plugins/odometer.min.js' %}"></script>-->
+<!--<script src="{% static 'js/plugins/wow.min.js' %}"></script>-->
+<!--<script src="{% static 'js/main.js' %}"></script>-->
+<!--</body>-->
+<!--</html>-->

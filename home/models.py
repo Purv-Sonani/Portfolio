@@ -64,10 +64,17 @@ class About(SingletonModel):
         return self.moto
 
 
+class TechStack(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    technology = models.CharField(max_length=200)
+    tech_stacks = models.ManyToManyField(TechStack, blank=True)  # new
     description = models.TextField()
+    github = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.name
