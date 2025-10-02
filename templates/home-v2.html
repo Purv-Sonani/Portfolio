@@ -535,12 +535,12 @@
             <div class="cs_isotop_item">
                 <div class="cs_project_card">
                     <div class="cs_project_card__content cs_text-center">
-                        <h3 class="cs_project_card__title">{{ project.title }}</h3>
+                        <h3 class="cs_project_card__title">{{ project.name }}</h3>
                         <p class="cs_project_card__description">
                             {{ project.description }}
                         </p>
                         <div class="cs_project_card__stack">
-                            {% for tech in project.tech_stack.all %}
+                            {% for tech in project.tech_stacks.all %}
                             <span>{{ tech.name }}</span>
                             {% endfor %}
                         </div>

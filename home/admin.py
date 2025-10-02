@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Profile, ContactInfo, Project, About, Education, Skill
+from .models import Profile, ContactInfo, Project, About, Education, Skill, TechStack
+
 
 class SingletonAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
@@ -20,9 +21,14 @@ class AboutAdmin(SingletonAdmin):
 class ContactInfoAdmin(SingletonAdmin):
     list_display = ['email', 'github_url', 'linkedin_url', 'phone_number']
 
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    filter_horizontal = ('tech_stacks',)
+
 # admin.site.register(Profile)
 # admin.site.register(ContactInfo)
-admin.site.register(Project)
+# admin.site.register(Project)
+admin.site.register(TechStack)
 # admin.site.register(About)
 admin.site.register(Education)
 admin.site.register(Skill)
