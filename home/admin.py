@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, ContactInfo, Project, About, Education, Skill, TechStack, Experience
+from .models import Profile, ContactInfo, Project, About, Education, Skill, TechStack, Experience, ContactSubmission
 from .forms import ExperienceForm
 
 
@@ -38,4 +38,21 @@ admin.site.register(TechStack)
 # admin.site.register(About)
 admin.site.register(Education)
 admin.site.register(Skill)
+
+class ContactSubmissionAdmin(admin.ModelAdmin):
+    """
+    Admin options for the ContactSubmission model.
+    """
+    # This makes the list view more useful than the default "ContactSubmission object (1)"
+    list_display = ('name', 'email', 'submitted_at')
+
+    # This function removes the "Add" button
+    def has_add_permission(self, request):
+        return False
+
+    # (Recommended) This function removes the ability to edit a submission
+    def has_change_permission(self, request, obj=None):
+        return False
+
+admin.site.register(ContactSubmission, ContactSubmissionAdmin)
 
