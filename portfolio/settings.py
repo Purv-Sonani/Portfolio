@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfolio_db',      # The name of the database you created
-        'USER': 'PurvSonani',    # The user you created
+        'USER': 'purvsonani',    # The user you created
         'PASSWORD': 'Purv@2809', # The password you set
         'HOST': 'localhost',         # Or '127.0.0.1'
         'PORT': '5432',              # Default PostgreSQL port
