@@ -1788,8 +1788,21 @@ hr {
   z-index: 101;
 }
 
+/* Text Logo Styles */
 .cs_site_branding {
-  display: inline-block;
+  /* font-family is removed to use your project's default font */
+  font-size: 26px;
+  font-weight: 600;
+  color: #ff6d5a; /* Your new initial color */
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  /* Updated transition for a smooth hover effect */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.cs_site_branding:hover {
+  color: #E85A4D; /* A slightly darker shade for the hover state */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Minor shadow on hover */
 }
 
 .cs_site_header {

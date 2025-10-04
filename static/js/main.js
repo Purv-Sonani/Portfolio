@@ -36,6 +36,7 @@
     $(window).trigger('resize');
     preloader();
     isotopInit();
+    smoothScrollToAnchor();
   });
 
   $(function () {
@@ -285,5 +286,26 @@ function scrollToTop() {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 300); // 300ms scroll speed
   });
+}
+
+/*--------------------------------------------------------------
+  12. Smooth Scrolling for Anchor Links from Other Pages
+--------------------------------------------------------------*/
+function smoothScrollToAnchor() {
+  // Check for a hash in the URL on page load.
+  if (window.location.hash) {
+    var hash = window.location.hash;
+    var $targetElement = $(hash);
+
+    // If the target element exists on the page
+    if ($targetElement.length) {
+      // A small delay ensures the page is fully ready before scrolling.
+      setTimeout(function() {
+        $('html, body').animate({
+          scrollTop: $targetElement.offset().top - 80 // Adjust 80 for your sticky header's height
+        }, 500); // 500ms scroll speed
+      }, 100);
+    }
+  }
 }
 

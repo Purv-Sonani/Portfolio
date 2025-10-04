@@ -8,7 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Laralink">
     <!-- Favicon Icon -->
-    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicons/favicon.ico' %}">
     <!-- Site Title -->
     <title>About Me</title>
 
@@ -30,28 +33,17 @@
         <div class="container">
             <div class="cs_main_header_in">
                 <div class="cs_main_header_left">
-                    <a class="cs_site_branding" href="/">
-                        <img src="{% static 'img/logo2.svg' %}" alt="Logo">
+                    <a class="cs_hero_title cs_font_28 cs_black wow fadeInLeft" data-wow-duration="0.8s"
+                       data-wow-delay="0.2s" href="/"><span class="cs_gradient_text">purvsonani.dev</span>
                     </a>
                 </div>
                 <div class="cs_main_header_center">
                     <div class="cs_nav">
                         <ul class="cs_nav_list">
-                            <li class="menu-item-has-children"><a href="/home">Home</a>
-
-                            </li>
-                            <li class="active menu-item-has-children"><a href="/about">About</a>
-
-                            </li>
-                            <!--                            <li class="menu-item-has-children"><a href="#">Portfolio</a>-->
-
-                            <!--                            </li>-->
-                            <!--                            <li class="menu-item-has-children"><a href="#">Pages</a>-->
-
-                            <!--                            </li>-->
-                            <!--                            <li class="menu-item-has-children"><a href="blog.html">Blog</a>-->
-
-                            <!--                            </li>-->
+                            <li class="menu-item-has-children"><a href="/home">Home</a></li>
+                            <li class="active menu-item-has-children"><a href="/about">About</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'home' %}#experience">Experience</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'home' %}#projects">Projects</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
@@ -91,9 +83,9 @@
                 <div class="col-lg-6">
                     <div class="cs_pr_65">
                         <div class="cs_image_box cs_style_3 position-relative" style="width: 70%;">
-<!--                            <div class="cs_imagebox_shape_about_2 position-absolute">-->
-<!--                                <img src="{% static 'img/about_shape_3.svg' %}" alt="">-->
-<!--                            </div>-->
+                            <!--                            <div class="cs_imagebox_shape_about_2 position-absolute">-->
+                            <!--                                <img src="{% static 'img/about_shape_3.svg' %}" alt="">-->
+                            <!--                            </div>-->
                             <div class="cs_image_wrap cs_radius_20 overflow-hidden">
                                 <img class="w-100" src="{{ about.profile_image.url }}" alt="about_2_image">
                             </div>
@@ -227,7 +219,8 @@
                         {% for skill in skills %}
                         <div class="cs_progressbar cs_style_2">
                             <div class="label cs_font_20 cs_semi_bold">{{ skill.name }}</div>
-                            <h3 class="cs_progressbar_head cs_ternary_color cs_normal cs_font_14 text-end">{{ skill.percentage }}%</h3>
+                            <h3 class="cs_progressbar_head cs_ternary_color cs_normal cs_font_14 text-end">{{
+                                skill.percentage }}%</h3>
                             <div class="cs_progress" data-progress="{{ skill.percentage }}">
                                 <div class="cs_progress_in"></div>
                             </div>

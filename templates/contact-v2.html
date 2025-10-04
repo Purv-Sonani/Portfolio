@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
+    <!-- Favicon Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicons/favicon.ico' %}">
+    <!-- Favicon Icon -->
     <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/plugins/odometer-theme-default.css' %}">
@@ -18,19 +24,17 @@
         <div class="container">
             <div class="cs_main_header_in">
                 <div class="cs_main_header_left">
-                    <a class="cs_site_branding" href="/">
-                        <img src="{% static 'img/logo2.svg' %}" alt="Logo">
+                    <a class="cs_hero_title cs_font_28 cs_black wow fadeInLeft" data-wow-duration="0.8s"
+                       data-wow-delay="0.2s" href="/"><span class="cs_gradient_text">purvsonani.dev</span>
                     </a>
                 </div>
                 <div class="cs_main_header_center">
                     <div class="cs_nav">
                         <ul class="cs_nav_list">
-                            <li class="menu-item-has-children"><a href="/home">Home</a>
-
-                            </li>
-                            <li class="menu-item-has-children"><a href="/about">About</a>
-
-                            </li>
+                            <li class="menu-item-has-children"><a href="/home">Home</a></li>
+                            <li class="menu-item-has-children"><a href="/about">About</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'home' %}#experience">Experience</a></li>
+                            <li class="menu-item-has-children"><a href="{% url 'home' %}#projects">Projects</a></li>
                             <li class="active menu-item-has-children"><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
@@ -55,16 +59,17 @@
     <div class="cs_height_50 cs_height_lg_80"></div>
 
     <div class="container"> {% if messages %}
-          <div class="cs_success_message">
+        <div class="cs_success_message">
             {% for message in messages %}
-              <p>{{ message }}</p>
+            <p>{{ message }}</p>
             {% endfor %}
-          </div>
+        </div>
         {% endif %}
 
         <div class="cs_contact_form_wrapper">
             <form method="POST" class="cs_contact_form">
-                {% csrf_token %} <div class="cs_form_field">
+                {% csrf_token %}
+                <div class="cs_form_field">
                     <label for="id_name">Name</label>
                     {{ form.name }}
                 </div>
@@ -83,11 +88,13 @@
             </form>
 
             <div class="cs_social_btns d-flex">
-                <a class="cs_accent_color_2" href="{{ contactInfo.github_url }}" target="_blank" rel="noopener noreferrer">
+                <a class="cs_accent_color_2" href="{{ contactInfo.github_url }}" target="_blank"
+                   rel="noopener noreferrer">
                     <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.3002 23V18.6C15.4532 17.222 15.0581 15.8391 14.2002 14.75C17.5002 14.75 20.8002 12.55 20.8002 8.7C20.8882 7.325 20.5032 5.972 19.7002 4.85C20.0082 3.585 20.0082 2.265 19.7002 1C19.7002 1 18.6002 1 16.4002 2.65C13.4962 2.1 10.5042 2.1 7.60016 2.65C5.40016 1 4.30016 1 4.30016 1C3.97016 2.265 3.97016 3.585 4.30016 4.85C3.49922 5.96747 3.11048 7.32807 3.20016 8.7C3.20016 12.55 6.50016 14.75 9.80016 14.75C9.37116 15.289 9.05216 15.905 8.86516 16.565C8.67816 17.225 8.62316 17.918 8.70016 18.6V23"
                               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8.7 18.5999C3.739 20.7999 3.2 16.3999 1 16.3999" stroke="currentColor" stroke-width="2"
+                        <path d="M8.7 18.5999C3.739 20.7999 3.2 16.3999 1 16.3999" stroke="currentColor"
+                              stroke-width="2"
                               stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>

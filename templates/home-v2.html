@@ -9,7 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Laralink">
     <!-- Favicon Icon -->
-    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicons/favicon.ico' %}">
     <!-- Site Title -->
     <title>Purv Sonani Portfolio</title>
     <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
@@ -32,31 +35,17 @@
         <div class="container">
             <div class="cs_main_header_in">
                 <div class="cs_main_header_left">
-                    <a class="cs_site_branding" href="/">
-                        <img src="{% static 'img/logo2.svg' %}" alt="Logo">
+                    <a class="cs_hero_title cs_font_28 cs_black wow fadeInLeft" data-wow-duration="0.8s"
+                       data-wow-delay="0.2s" href="/"><span class="cs_gradient_text">purvsonani.dev</span>
                     </a>
                 </div>
                 <div class="cs_main_header_center">
                     <div class="cs_nav">
                         <ul class="cs_nav_list">
-                            <li class="active menu-item-has-children"><a href="/home">Home</a>
-
-                            </li>
-                            <li class="menu-item-has-children"><a href="/about">About</a>
-
-                            </li>
-                            <li class="menu-item-has-children"><a href="#experience">Experience</a>
-
-                            </li>
-                            <li class="menu-item-has-children"><a href="#projects">Projects</a>
-
-                            </li>
-                            <!--                            <li class="menu-item-has-children"><a href="#">Pages</a>-->
-
-                            <!--                            </li>-->
-                            <!--                            <li class="menu-item-has-children"><a href="blog.html">Blog</a>-->
-
-                            <!--                            </li>-->
+                            <li class="active menu-item-has-children"><a href="/home">Home</a></li>
+                            <li class="menu-item-has-children"><a href="/about">About</a></li>
+                            <li class="menu-item-has-children"><a href="#experience">Experience</a></li>
+                            <li class="menu-item-has-children"><a href="#projects">Projects</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
                     </div>
