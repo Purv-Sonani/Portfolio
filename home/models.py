@@ -63,6 +63,26 @@ class About(SingletonModel):
     def __str__(self):
         return self.moto
 
+class Experience(models.Model):
+    company = models.CharField(max_length=200)
+    role = models.CharField(max_length=200)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    description = models.TextField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Experience"
+        verbose_name_plural = "Experiences"
+        ordering = ['-end_date']
+
+    def __str__(self):
+        return f"{self.role} at {self.company}"
+
+    @property
+    def duration(self):
+        start = self.start_date.strftime("%b %Y") if self.start_date else ""
+        end = self.end_date.strftime("%b %Y") if self.end_date else "Present"
+        return f"{start} - {end}"
 
 class TechStack(models.Model):
     name = models.CharField(max_length=100, unique=True)

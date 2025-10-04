@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Profile, About, ContactInfo, Project, Education, Skill
+from .models import Profile, About, ContactInfo, Project, Education, Skill, TechStack, Experience
 
 
 # Create your views here.
@@ -7,10 +7,15 @@ def home(request):
     profile = Profile.load()
     contactInfo = ContactInfo.load()
     projects = Project.objects.all()
+    techStacks = TechStack.objects.all()
+    experiences = Experience.objects.all()
+
     return render(request, "home-v2.html", {
         'profile': profile,
         'projects': projects,
-        'contactInfo': contactInfo
+        'contactInfo': contactInfo,
+        'techStacks': techStacks,
+        'experiences': experiences,
     })
 
 def about(request):
@@ -26,5 +31,8 @@ def about(request):
     })
 
 def contact(request):
-    return render(request, "contact-v2.html")
+    contactInfo = ContactInfo.load()
+    return render(request, "contact-v2.html",  {
+        'contactInfo': contactInfo,
+    })
 

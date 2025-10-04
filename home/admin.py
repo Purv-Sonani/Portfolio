@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Profile, ContactInfo, Project, About, Education, Skill, TechStack
+from .models import Profile, ContactInfo, Project, About, Education, Skill, TechStack, Experience
+from .forms import ExperienceForm
 
 
 class SingletonAdmin(admin.ModelAdmin):
@@ -24,6 +25,11 @@ class ContactInfoAdmin(SingletonAdmin):
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     filter_horizontal = ('tech_stacks',)
+
+@admin.register(Experience)
+class ExperienceAdmin(admin.ModelAdmin):
+    form = ExperienceForm
+    list_display = ('company', 'role', 'duration')
 
 # admin.site.register(Profile)
 # admin.site.register(ContactInfo)

@@ -48,6 +48,7 @@
     tabs();
     counterInit();
     progressBar();
+    scrollToTop();
     if ($.exists('.wow')) {
       new WOW().init();
     }
@@ -263,3 +264,26 @@
   }
   document.addEventListener('mousemove', cursorMovingAnimation);
 })(jQuery); // End of use strict
+
+/*--------------------------------------------------------------
+  11. Scroll To Top
+--------------------------------------------------------------*/
+function scrollToTop() {
+  var $scrollTopBtn = $('#scrollTopBtn');
+
+  // Show or hide the button based on scroll position
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 400) {
+      $scrollTopBtn.addClass('show');
+    } else {
+      $scrollTopBtn.removeClass('show');
+    }
+  });
+
+  // Smooth scroll to top on click
+  $scrollTopBtn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 300); // 300ms scroll speed
+  });
+}
+
