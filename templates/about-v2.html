@@ -219,8 +219,8 @@
                         {% for skill in skills %}
                         <div class="cs_progressbar cs_style_2">
                             <div class="label cs_font_20 cs_semi_bold">{{ skill.name }}</div>
-                            <h3 class="cs_progressbar_head cs_ternary_color cs_normal cs_font_14 text-end">{{
-                                skill.percentage }}%</h3>
+                            <h3 class="cs_progressbar_head cs_ternary_color cs_normal cs_font_14 text-end">
+                                {{ skill.percentage }}%</h3>
                             <div class="cs_progress" data-progress="{{ skill.percentage }}">
                                 <div class="cs_progress_in"></div>
                             </div>
@@ -390,7 +390,7 @@
     </div>
     <div class="container">
         <div class="cs_footer_cta">
-            <h2 class="cs_font_92 cs_gradient_text_2 cs_semi_bold">Have a project?</h2>
+            <h2 class="cs_font_70 cs_gradient_text_2 cs_semi_bold">Have a project?</h2>
             <a href="/contact" class="cs_btn cs_style_1 cs_primary_font"><span>Let’s
             Talk</span></a>
         </div>
