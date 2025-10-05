@@ -289,22 +289,44 @@ function scrollToTop() {
 }
 
 /*--------------------------------------------------------------
-  12. Smooth Scrolling for Anchor Links from Other Pages
+  12. Smooth Scrolling for Anchor Links (Final Version)
 --------------------------------------------------------------*/
 function smoothScrollToAnchor() {
-  // Check for a hash in the URL on page load.
-  if (window.location.hash) {
-    var hash = window.location.hash;
-    var $targetElement = $(hash);
+  var hash = window.location.hash;
 
-    // If the target element exists on the page
-    if ($targetElement.length) {
-      // A small delay ensures the page is fully ready before scrolling.
-      setTimeout(function() {
-        $('html, body').animate({
-          scrollTop: $targetElement.offset().top - 80 // Adjust 80 for your sticky header's height
-        }, 500); // 500ms scroll speed
-      }, 100);
+  // Only proceed if there is a hash in the URL
+  if (hash) {
+    var $targetElement = $(hash);
+    var $isotopeContainer = $('.cs_isotop'); // The container for your projects
+
+    // Check if the target and the isotope container actually exist on the page
+    if ($targetElement.length && $isotopeContainer.length) {
+
+      // We will wait for Isotope to fire its 'layoutComplete' event
+      $isotopeContainer.on('layoutComplete', function() {
+        // This code will only run AFTER the project grid is stable and fully rendered.
+
+        // A minimal delay just to be extra safe
+        setTimeout(function() {
+          var headerHeight = $('.cs_sticky_header').outerHeight() || 0;
+          var targetPosition = $targetElement.offset().top - headerHeight - 20;
+
+          $('html, body').animate({
+            scrollTop: targetPosition
+          }, 800); // 800ms scroll speed
+        }, 100);
+      });
+
+    } else if ($targetElement.length) {
+        // Fallback for pages that don't have an Isotope grid (like scrolling to #experience)
+        setTimeout(function() {
+            var headerHeight = $('.cs_sticky_header').outerHeight() || 0;
+            var targetPosition = $targetElement.offset().top - headerHeight - 20;
+
+            $('html, body').animate({
+                scrollTop: targetPosition
+            }, 800);
+        }, 500); // Use the original delay here
     }
   }
 }
