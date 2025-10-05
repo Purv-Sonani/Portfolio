@@ -38,16 +38,25 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;family=Lexend+Deca:wght@400;500;600;700;800&amp;display=swap");
 
+:root {
+  --background-color: #f9fbff;      /* Your light blueish background */
+  --text-primary: #12103e;          /* Your dark blue for headings */
+  --text-secondary: #767682;        /* Your gray for body text */
+  --primary-brand-color: #045D5D;  /* The main deep teal for branding */
+  --accent-color: #058A8A;       /* Lighter teal for hovers/links */
+  --footer-bg: #023D3D;           /* Dark teal footer background */
+  --footer-text: #E5E7EB;         /* Light gray footer text */
+}
 
 body,
 html {
-  color: #767682;
   font-family: "Jost", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.666em;
   overflow-x: hidden;
-  background-color: #f9fbff;
+  background-color: var(--background-color);
+  color: var(--text-secondary);
 }
 
 h1,
@@ -56,13 +65,13 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both;
-  color: #12103e;
-  padding: 0;
-  margin: 0 0 20px 0;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: 600;
   line-height: 1.3em;
-  font-family: "Lexend Deca", sans-serif;
+  clear: both;
+  padding: 0;
+  margin: 0 0 20px 0;
+  color: var(--text-primary);
 }
 
 .cs_primary_font {
@@ -153,7 +162,7 @@ button {
 
 a:hover {
   text-decoration: none;
-  color: #ff6d5a;
+  color: #045D5D;
 }
 
 table {
@@ -1502,17 +1511,17 @@ hr {
 
 .cs_accent_color,
 .cs_accent_color_hover:hover {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 
 .cs_accent_color,
 .cs_accent_color_hover:hover {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 
 .cs_accent_color_2,
 .cs_accent_color_2_hover:hover {
-  color: #342ead;
+  color: #045D5D;
 }
 
 .cs_gray_bg {
@@ -1540,7 +1549,7 @@ hr {
 }
 
 .cs_gradient_text {
-  background: linear-gradient(147deg, #342ead 0%, #ff6d5a 100%);
+  background: linear-gradient(147deg, #045D5D 0%, #045D5D 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1548,7 +1557,7 @@ hr {
 }
 
 .cs_gradient_border_text {
-  background: linear-gradient(147deg, #342ead 0%, #ff6d5a 100%);
+  background: linear-gradient(147deg, #045D5D 0%, #045D5D 100%);
   background-clip: text;
   -webkit-background-clip: text;
   text-stroke: 4px transparent;
@@ -1562,8 +1571,8 @@ hr {
   left: -35px;
 }
 .cs_image_box.cs_style_1 .cs_happy_client {
-  -webkit-box-shadow: 5px 10px 60px 0px rgba(52, 46, 173, 0.15);
-          box-shadow: 5px 10px 60px 0px rgba(52, 46, 173, 0.15);
+  -webkit-box-shadow: 5px 10px 60px 0px rgba(4, 93, 93, 0.15);
+          box-shadow: 5px 10px 60px 0px rgba(4, 93, 93, 0.15);
   right: 7%;
   bottom: 18%;
   padding: 10px 15px;
@@ -1586,8 +1595,8 @@ hr {
   right: 35px;
 }
 .cs_image_box.cs_style_3 .cs_happy_client {
-  -webkit-box-shadow: 5px 10px 60px 0px rgba(52, 46, 173, 0.15);
-          box-shadow: 5px 10px 60px 0px rgba(52, 46, 173, 0.15);
+  -webkit-box-shadow: 5px 10px 60px 0px rgba(4, 93, 93, 0.15);
+          box-shadow: 5px 10px 60px 0px rgba(4, 93, 93, 0.15);
   right: -40px;
   bottom: 100px;
   padding: 10px 15px;
@@ -1644,7 +1653,7 @@ hr {
   margin-top: 20px;
 }
 .breadcrumb a {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -1793,7 +1802,7 @@ hr {
   /* font-family is removed to use your project's default font */
   font-size: 26px;
   font-weight: 600;
-  color: #ff6d5a; /* Your new initial color */
+  color: #045D5D; /* Your new initial color */
   text-decoration: none;
   letter-spacing: 0.5px;
   /* Updated transition for a smooth hover effect */
@@ -1849,8 +1858,8 @@ hr {
 }
 .cs_site_header.cs_style_1.cs_color_1 {
   background: #fff;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(52, 46, 173, 0.1);
-          box-shadow: 0px 1px 2px 0px rgba(52, 46, 173, 0.1);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(4, 93, 93, 0.1);
+          box-shadow: 0px 1px 2px 0px rgba(4, 93, 93, 0.1);
 }
 .cs_site_header.cs_style_1.cs_color_1 .cs_menu_toggle {
   color: #12103e;
@@ -2010,7 +2019,7 @@ hr {
           transform: rotate(45deg);
 }
 .cs_close:hover {
-  color: #ff6d5a;
+  color: #045D5D;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -2020,7 +2029,7 @@ hr {
   right: 5px;
   top: 0;
   font-size: 12px;
-  background-color: #ff6d5a;
+  background-color: #045D5D;
   color: #fff;
   display: inline-block;
   line-height: 1.6em;
@@ -2133,7 +2142,7 @@ hr {
     height: inherit;
   }
   .cs_nav .cs_nav_list > li.active > a {
-    color: #ff6d5a;
+    color: #045D5D;
   }
   .cs_nav .cs_nav_list > li:last-child {
     margin-right: 0;
@@ -2187,7 +2196,7 @@ hr {
     background: linear-gradient(261deg, #fff -5.9%, #fff1ef 23.95%, #e0f0ff 160.95%);
     -webkit-box-shadow: 1px 1px 2px 0px rgba(19, 16, 63, 0.1);
             box-shadow: 1px 1px 2px 0px rgba(19, 16, 63, 0.1);
-    border-top: 2px solid #ff6d5a;
+    border-top: 2px solid #045D5D;
     padding: 10px 0;
     z-index: 100;
     opacity: 0;
@@ -2328,7 +2337,7 @@ hr {
     color: #fff;
   }
   .cs_nav .cs_nav_list {
-    border-top: 2px solid #ff6d5a !important;
+    border-top: 2px solid #045D5D !important;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     position: absolute;
@@ -2507,7 +2516,7 @@ hr {
           align-items: center;
   border: none;
   outline: none;
-  background-color: #ff6d5a;
+  background-color: #045D5D;
   color: #fff;
   font-weight: 600;
   padding: 13px 37px;
@@ -2568,7 +2577,7 @@ hr {
 }
 
 .cs_circle_btn.cs_style_1.cs_type_1 {
-  background: rgba(52, 46, 173, 0.1);
+  background: rgba(4, 93, 93, 0.1);
 }
 
 /*-----------Button text------------*/
@@ -2671,7 +2680,7 @@ hr {
   border-width: 3px;
   border-style: solid;
   border-color: transparent;
-  border-top-color: #ff6d5a;
+  border-top-color: #045D5D;
   border-radius: 50%;
   position: absolute;
   width: calc(100% + 6px);
@@ -2694,7 +2703,7 @@ hr {
   top: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #342ead;
+  background-color: #045D5D;
   -webkit-animation: rotation_3 3s ease-in-out infinite;
           animation: rotation_3 3s ease-in-out infinite;
 }
@@ -2751,7 +2760,7 @@ hr {
 .cs_cursor_sm {
   width: 8px;
   height: 8px;
-  background-color: #ff6d5a;
+  background-color: #045D5D;
   left: 0;
   top: 0;
   pointer-events: none;
@@ -3264,7 +3273,7 @@ hr {
   }
 }
 .cs_tabs.cs_style_1 .cs_tab_links li.active {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 
 .cs_tab {
@@ -3344,7 +3353,7 @@ hr {
           justify-content: center;
 }
 .cs_pagenation.cs_style_1 ul li.active a {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 .cs_pagenation.cs_style_1 ul li.prev, .cs_pagenation.cs_style_1 ul li.next {
   border: 1px solid #c2c2c7;
@@ -3353,13 +3362,13 @@ hr {
   transition: all 0.3s ease-in-out;
 }
 .cs_pagenation.cs_style_1 ul li.prev:hover, .cs_pagenation.cs_style_1 ul li.next:hover {
-  border-color: #ff6d5a;
+  border-color: #045D5D;
 }
 .cs_pagenation.cs_style_1 ul li.next {
-  border-color: #ff6d5a;
+  border-color: #045D5D;
 }
 .cs_pagenation.cs_style_1 ul li.next a {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 
 /*--------------------------------------------------------------
@@ -3412,7 +3421,7 @@ hr {
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_btn:hover .cs_circle_btn {
   color: #fff;
-  background-color: #ff6d5a;
+  background-color: #045D5D;
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_btn_text {
   padding-right: 30px;
@@ -3427,7 +3436,7 @@ hr {
   left: 100%;
 }
 .cs_iconbox.cs_style_1:hover .cs_circle_btn.cs_style_1 {
-  background-color: #ff6d5a;
+  background-color: #045D5D;
   color: #fff;
 }
 .cs_iconbox.cs_style_1:hover .cs_iconbox_btn:hover .cs_circle_btn.cs_style_1 > * {
@@ -3480,13 +3489,13 @@ hr {
   .cs_iconbox.cs_style_2 .cs_iconbox_icon {
     height: 70px;
     width: 70px;
-    background-color: rgba(52, 46, 173, 0.1);
+    background-color: rgba(4, 93, 93, 0.1);
     border-radius: 50%;
     padding: 20px;
   }
 }
 .cs_iconbox.cs_style_2 .cs_iconbox_title {
-  color: #342ead;
+  color: #045D5D;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -3507,10 +3516,10 @@ hr {
   }
 }
 .cs_iconbox.cs_style_2:hover .cs_iconbox_title {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 .cs_iconbox.cs_style_2:hover .cs_circle_btn {
-  background-color: #ff6d5a;
+  background-color: #045D5D;
   color: #fff;
   border: transparent;
 }
@@ -3534,8 +3543,8 @@ hr {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #342ead), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #342ead), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #342ead), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #342ead), color-stop(50%, transparent));
-  background: linear-gradient(90deg, #342ead 50%, transparent 50%), linear-gradient(90deg, #342ead 50%, transparent 50%), linear-gradient(0deg, #342ead 50%, transparent 50%), linear-gradient(0deg, #342ead 50%, transparent 50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #045D5D), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #045D5D), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #045D5D), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #045D5D), color-stop(50%, transparent));
+  background: linear-gradient(90deg, #045D5D 50%, transparent 50%), linear-gradient(90deg, #045D5D 50%, transparent 50%), linear-gradient(0deg, #045D5D 50%, transparent 50%), linear-gradient(0deg, #045D5D 50%, transparent 50%);
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
   background-position: 0;
@@ -3575,8 +3584,8 @@ hr {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #ff6d5a), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #ff6d5a), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ff6d5a), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ff6d5a), color-stop(50%, transparent));
-  background: linear-gradient(90deg, #ff6d5a 50%, transparent 50%), linear-gradient(90deg, #ff6d5a 50%, transparent 50%), linear-gradient(0deg, #ff6d5a 50%, transparent 50%), linear-gradient(0deg, #ff6d5a 50%, transparent 50%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #045D5D), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(50%, #045D5D), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #045D5D), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #045D5D), color-stop(50%, transparent));
+  background: linear-gradient(90deg, #045D5D 50%, transparent 50%), linear-gradient(90deg, #045D5D 50%, transparent 50%), linear-gradient(0deg, #045D5D 50%, transparent 50%), linear-gradient(0deg, #045D5D 50%, transparent 50%);
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 10px 2px, 10px 2px, 2px 10px, 2px 10px;
   background-position: 0;
@@ -3630,7 +3639,7 @@ hr {
 }
 .cs_progressbar.cs_style_1 .cs_progress_in {
   height: 100%;
-  background: linear-gradient(59deg, #342ead 0%, #ff6d5a 100%);
+  background: linear-gradient(59deg, #045D5D 0%, #045D5D 100%);
 }
 .cs_progressbar.cs_style_1 .label {
   position: absolute;
@@ -3658,7 +3667,7 @@ hr {
 }
 .cs_progressbar.cs_style_2 .cs_progress_in {
   height: 100%;
-  background: #ff6d5a;
+  background: #045D5D;
   border-radius: inherit;
 }
 .cs_progressbar.cs_style_2 .label {
@@ -3688,7 +3697,7 @@ hr {
 }
 .cs_progressbar.cs_style_2 .cs_progress_in {
   height: 100%;
-  background: #342ead;
+  background: #045D5D;
   border-radius: inherit;
 }
 .cs_progressbar.cs_style_2 .label {
@@ -4066,7 +4075,7 @@ hr {
   left: 50%;
   margin-left: -5px;
   border-radius: 50%;
-  background-color: #ff6d5a;
+  background-color: #045D5D;
   bottom: -5px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -4087,7 +4096,7 @@ hr {
 }
 
 .cs_isotop_filter.cs_style1 .active a {
-  color: #ff6d5a;
+  color: #045D5D;
 }
 
 .cs_isotop_filter.cs_style1 .active a::before {
@@ -4323,7 +4332,7 @@ hr {
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 100px;
-  border-bottom: 1px solid rgba(52, 46, 173, 0.06);
+  border-bottom: 1px solid rgba(4, 93, 93, 0.06);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4386,8 +4395,8 @@ hr {
   border-radius: 10px;
   border: 2px solid #fff;
   background: #fff;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(52, 46, 173, 0.12);
-          box-shadow: 0px 1px 2px 0px rgba(52, 46, 173, 0.12);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(4, 93, 93, 0.12);
+          box-shadow: 0px 1px 2px 0px rgba(4, 93, 93, 0.12);
   overflow: hidden;
 }
 @media (max-width: 575px) {
@@ -4407,7 +4416,7 @@ hr {
   padding-bottom: 0;
 }
 .cs_blog.cs_style_1:hover .cs_circle_btn.cs_style_1 {
-  background-color: #ff6d5a;
+  background-color: #045D5D;
   color: #fff;
 }
 
@@ -4423,7 +4432,7 @@ hr {
 .cs_blog.cs_style_2 {
   padding-top: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(52, 46, 173, 0.06);
+  border-bottom: 1px solid rgba(4, 93, 93, 0.06);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4469,7 +4478,7 @@ hr {
   height: 55px;
   width: 55px;
   border-radius: 50%;
-  border: 1px solid #342ead;
+  border: 1px solid #045D5D;
 }
 .cs_blog.cs_style_2 .cs_blog_avater h2 {
   opacity: 0.9;
@@ -4485,8 +4494,8 @@ hr {
   width: 150px;
   border-radius: 10px;
   border: 2px solid #fff;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(52, 46, 173, 0.12);
-          box-shadow: 0px 1px 2px 0px rgba(52, 46, 173, 0.12);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(4, 93, 93, 0.12);
+          box-shadow: 0px 1px 2px 0px rgba(4, 93, 93, 0.12);
   overflow: hidden;
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -4520,7 +4529,7 @@ hr {
   margin-bottom: 15px;
 }
 .cs_blog.cs_style_2:hover .cs_circle_btn.cs_style_1 {
-  background-color: #342ead;
+  background-color: #045D5D;
   color: #fff;
 }
 
@@ -4548,7 +4557,7 @@ hr {
   color: #36345b;
 }
 .cs_blog.cs_style_3 .cs_blog_avater img {
-  border: 1px solid #342ead;
+  border: 1px solid #045D5D;
   border-radius: 50%;
 }
 
@@ -4723,7 +4732,7 @@ hr {
   height: 55px;
   width: 55px;
   border-radius: 50%;
-  border: 2px solid #342ead;
+  border: 2px solid #045D5D;
 }
 .cs_testimonial.cs_style_1 .cs_tastimonial_avater h2 {
   opacity: 0.9;
@@ -4819,7 +4828,7 @@ hr {
   padding: 25px 30px;
   bottom: 0;
   right: 0;
-  background: rgba(52, 46, 173, 0.7);
+  background: rgba(4, 93, 93, 0.7);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -5004,7 +5013,7 @@ hr {
 .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #342ead;
+  border: 1px solid #045D5D;
 }
 
 .cs_form.cs_style_1 {
@@ -5048,16 +5057,16 @@ hr {
   border-radius: inherit;
 }
 .cs_search_form.cs_style_1 input:focus {
-  border: 1px solid #342ead;
+  border: 1px solid #045D5D;
 }
 .cs_search_form.cs_style_1 button {
   border: none;
   outline: none;
-  background-color: #342ead;
+  background-color: #045D5D;
   width: 50px;
 }
 .cs_search_form.cs_style_1 button:hover {
-  background: #ff6d5a;
+  background: #045D5D;
 }
 
 /*--------------------------------------------------------------
@@ -5088,8 +5097,8 @@ hr {
 }
 .cs_category.cs_style_1 li.active a {
   background: #fff7f5;
-  color: #ff6d5a;
-  border-right: 3px solid #ff6d5a;
+  color: #045D5D;
+  border-right: 3px solid #045D5D;
 }
 
 .cs_category.cs_style_2 {
@@ -5115,11 +5124,11 @@ hr {
   font-size: 16px;
 }
 .cs_category.cs_style_2 ul li:hover a {
-  background: #342ead;
+  background: #045D5D;
   color: #fff;
 }
 .cs_category.cs_style_2 ul li:hover a, .cs_category.cs_style_2 ul li.active a {
-  background: #342ead;
+  background: #045D5D;
   color: #fff;
   border-radius: 0 25px 25px 0;
 }
@@ -5353,18 +5362,18 @@ NEW STARTED FROM HERE
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  border-left: 3px solid #342ead;
-/*  border-right: 3px solid #342ead;*/
+  border-left: 3px solid #045D5D;
+/*  border-right: 3px solid #045D5D;*/
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   height: 100%;
-  box-shadow: 0 8px 25px -8px rgba(52, 46, 173, 0.3);
+  box-shadow: 0 8px 25px -8px rgba(4, 93, 93, 0.3);
 }
 
 .cs_project_card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px -8px rgba(52, 46, 173, 0.4);
+  box-shadow: 0 12px 30px -8px rgba(4, 93, 93, 0.4);
 }
 
 .cs_project_card__content {
@@ -5382,7 +5391,7 @@ NEW STARTED FROM HERE
 
 .cs_project_card__title {
   font-size: 24px;
-  color: #342ead;
+  color: #045D5D;
   font-weight: 600;
   margin: 0 0 12px;
 }
@@ -5405,8 +5414,8 @@ NEW STARTED FROM HERE
 
 .cs_project_card__stack span {
   /* NOTE: For the background, change "0, 191, 255" below to the RGB values of your primary color. */
-  background-color: rgba(52, 46, 173, 0.1);
-  color: #342ead;
+  background-color: rgba(4, 93, 93, 0.1);
+  color: #045D5D;
   padding: 5px 12px;
   border-radius: 15px;
   font-size: 14px;
@@ -5433,17 +5442,17 @@ NEW STARTED FROM HERE
   transition: all 0.3s ease;
   cursor: pointer;
   background-color: #ffffff;
-  border: 2px solid #342ead;
-  color: #342ead;
+  border: 2px solid #045D5D;
+  color: #045D5D;
 }
 
 .cs_project_card__button svg {
-  stroke: #342ead;
+  stroke: #045D5D;
   transition: all 0.3s ease;
 }
 
 .cs_project_card__button:hover {
-  background-color: #342ead;
+  background-color: #045D5D;
   color: #ffffff;
   transform: translateY(-2px);
 }
@@ -5460,15 +5469,15 @@ NEW STARTED FROM HERE
   border-radius: 12px;
   padding: 30px;
   /* A prominent top border using your primary color */
-  border-top: 3px solid #342ead;
+  border-top: 3px solid #045D5D;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 30px -5px rgba(52, 46, 173, 0.3);
+  box-shadow: 0 0 30px -5px rgba(4, 93, 93, 0.3);
 }
 
 .cs_experience_card:hover {
   transform: translateY(-5px);
   /* Make the glow slightly stronger on hover */
-  box-shadow: 0 5px 35px -5px rgba(52, 46, 173, 0.4);
+  box-shadow: 0 5px 35px -5px rgba(4, 93, 93, 0.4);
 }
 
 .cs_experience_header {
@@ -5493,7 +5502,7 @@ NEW STARTED FROM HERE
   display: inline-block;
   width: 9px;
   height: 9px;
-  background-color: #342ead;
+  background-color: #045D5D;
   border-radius: 50%;
   margin-right: 12px;
 }
@@ -5510,8 +5519,8 @@ NEW STARTED FROM HERE
   border-radius: 15px;
   font-size: 14px;
   font-weight: 500;
-  background-color: rgba(52, 46, 173, 0.1);
-  color: #342ead;
+  background-color: rgba(4, 93, 93, 0.1);
+  color: #045D5D;
 }
 
 .cs_experience_description p {
@@ -5552,27 +5561,27 @@ NEW STARTED FROM HERE
   border-radius: 15px; /* Fully rounded corners */
   font-size: 16px;
   font-weight: 500;
-  color: #342ead;
+  color: #045D5D;
   background-color: transparent;
   /* Border uses the requested color */
-  border: 2px solid #342ead;
+  border: 2px solid #045D5D;
   transition: all 0.3s ease;
   cursor: default;
 }
 
 .cs_tech_pill:hover {
   /* On hover, non-highlighted pills get the primary background color */
-  background-color: #342ead;
+  background-color: #045D5D;
   transform: translateY(-3px);
   color: #ffffff;
 }
 
 .cs_tech_pill.highlighted {
   /* The highlighted pill has a solid background and glow */
-  background-color: #342ead;
+  background-color: #045D5D;
   color: #ffffff;
-  /* The glow effect uses the RGB value of #342ead (52, 46, 173) */
-  box-shadow: 0 0 25px -5px rgba(52, 46, 173, 0.7);
+  /* The glow effect uses the RGB value of #045D5D (4, 93, 93) */
+  box-shadow: 0 0 25px -5px rgba(4, 93, 93, 0.7);
 }
 
 
@@ -5587,7 +5596,7 @@ NEW STARTED FROM HERE
   border-radius: 20px;
   padding: 40px;
   /* A subtle border for the card, using the primary color */
-  border: 1px solid rgba(52, 46, 173, 0.2); /* A transparent version of #342ead */
+  border: 1px solid rgba(4, 93, 93, 0.2); /* A transparent version of #045D5D */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -5635,9 +5644,9 @@ NEW STARTED FROM HERE
 .cs_form_field textarea:focus {
   outline: none;
   /* Focus color from your request */
-  border-color: #342ead;
+  border-color: #045D5D;
   /* Subtle glow on focus */
-  box-shadow: 0 0 0 3px rgba(52, 46, 173, 0.2);
+  box-shadow: 0 0 0 3px rgba(4, 93, 93, 0.2);
 }
 
 .cs_form_field textarea {
@@ -5651,22 +5660,20 @@ NEW STARTED FROM HERE
   justify-content: center;
   width: 100%;
   padding: 15px 25px;
-  border-radius: 50px; /* Fully rounded button */
+  border-radius: 50px;
   border: none;
   font-size: 18px;
   font-weight: 600;
-  color: #ffffff; /* White text for button */
-  /* Button background color from your request */
-  background-color: #342ead;
+  color: #ffffff;
+  background-color: var(--accent-color); /* Use the new accent teal */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cs_contact_button:hover {
-  /* Slightly darker shade on hover */
-  background-color: #2a258a;
+  background-color: var(--primary-brand-color); /* Use the darker brand teal for hover */
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(52, 46, 173, 0.4);
+  box-shadow: 0 8px 20px rgba(4, 93, 93, 0.3);
 }
 
 .cs_contact_socials {
@@ -5682,16 +5689,16 @@ NEW STARTED FROM HERE
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #342ead; /* Primary color border */
-  color: #342ead; /* Primary color icon */
+  border: 2px solid #045D5D; /* Primary color border */
+  color: #045D5D; /* Primary color icon */
   transition: all 0.3s ease;
 }
 
 .cs_social_icon:hover {
-  background-color: #342ead; /* Primary color background on hover */
+  background-color: #045D5D; /* Primary color background on hover */
   color: #ffffff; /* White icon on hover */
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(52, 46, 173, 0.3);
+  box-shadow: 0 5px 15px rgba(4, 93, 93, 0.3);
 }
 
 .cs_social_icon svg {
@@ -5714,20 +5721,20 @@ NEW STARTED FROM HERE
   height: 50px; /* Fixed height for button */
   border-radius: 50%; /* Make them perfectly round */
   background-color: transparent; /* Transparent background by default */
-  /* Border with your primary color (#342ead) */
-  border: 2px solid #342ead;
+  /* Border with your primary color (#045D5D) */
+  border: 2px solid #045D5D;
   /* Icon color also uses your primary color */
-  color: #342ead;
+  color: #045D5D;
   transition: all 0.3s ease;
   text-decoration: none; /* Remove underline if any */
 }
 
 .cs_contact_form_wrapper .cs_social_btns a.cs_accent_color_2:hover {
-  background-color: #342ead; /* Solid primary color background on hover */
+  background-color: #045D5D; /* Solid primary color background on hover */
   color: #ffffff; /* White icon on hover */
   transform: translateY(-3px); /* Subtle lift on hover */
   /* Subtle shadow on hover */
-  box-shadow: 0 5px 15px rgba(52, 46, 173, 0.3);
+  box-shadow: 0 5px 15px rgba(4, 93, 93, 0.3);
 }
 
 /* Ensure the SVG icon color changes correctly on hover */
@@ -5749,51 +5756,40 @@ NEW STARTED FROM HERE
 
 
 /*--------------------------------------------------------------
-  24. Scroll to Top Button Styles
+  24. Scroll to Top Button Styles (Updated for New Theme)
 ----------------------------------------------------------------*/
 .scroll-to-top-btn {
-  position: fixed; /* Stays in place on scroll */
+  position: fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 1000; /* Stays on top of other content */
-
-  /* Appearance */
-  width: 60px;
-  height: 60px;
-  border-radius: 50%; /* Makes it round */
-  background-color: #ff6d5a; /* Your primary color */
-  color: #ffffff; /* White arrow icon */
-  border: none;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color); /* Use the new accent teal */
+  color: #ffffff;
+  border: 2px solid #ffffff; /* White border to stand out on the footer */
+  box-sizing: border-box;
   cursor: pointer;
-
-  /* Centering the icon */
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Shadow for depth */
-  box-shadow: 0 4px 12px rgba(52, 46, 173, 0.4);
-
-  /* Initial state: hidden */
+  box-shadow: 0 4px 12px rgba(4, 93, 93, 0.3);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px); /* Start slightly lower for a nice pop-in effect */
-
-  /* Smooth transitions */
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
 }
 
 .scroll-to-top-btn.show {
-  /* Visible state */
   opacity: 1;
   visibility: visible;
-  transform: translateY(0); /* Move to its final position */
+  transform: translateY(0);
 }
 
-/* Hover effect */
 .scroll-to-top-btn:hover {
-  background-color: #2a258a; /* Slightly darker shade on hover */
-  transform: translateY(-5px); /* Lift effect on hover */
+  background-color: var(--primary-brand-color); /* Use the darker brand teal for hover */
+  transform: translateY(-5px);
 }
 
 /*--------------------------------------------------------------
@@ -5809,4 +5805,49 @@ NEW STARTED FROM HERE
   border: 1px solid #c3e6cb;
   border-radius: 8px;
   text-align: center;
+}
+
+/*--------------------------------------------------------------
+  25. Footer Theme Update (Final Palette)
+----------------------------------------------------------------*/
+.cs_footer.cs_style_1 {
+  background-color: var(--footer-bg); /* Use the new dark teal */
+  padding: 40px 0;
+  border-top: none;
+}
+
+/* Update footer text to the new light gray color */
+.cs_footer .cs_footer_cta h2,
+.cs_footer .cs_copyright {
+  color: var(--footer-text);
+}
+
+.cs_footer .cs_footer_cta h2 {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-fill-color: unset;
+  opacity: 0.95;
+}
+
+/* Style the button with the new light gray color */
+.cs_footer .cs_btn span,
+.cs_footer .cs_btn {
+  color: var(--footer-text);
+  border-color: var(--footer-text);
+}
+
+/* On hover, use the new accent color */
+.cs_footer .cs_btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #FFFFFF;
+}
+.cs_footer .cs_btn:hover span {
+  color: #FFFFFF;
+}
+
+.cs_footer .cs_copyright {
+  opacity: 0.7;
 }
