@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEBUG is False in production, unless an environment variable says otherwise
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['your-site-name.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['purvsonani.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
