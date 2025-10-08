@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class SingletonModel(models.Model):
     """
@@ -36,8 +37,10 @@ class Profile(SingletonModel):
     name = models.CharField(max_length=100)
     role = models.CharField(max_length=100)
     bio = models.TextField()
-    profile_image = models.ImageField(upload_to='profile_images/')
-    cv = models.FileField(upload_to='cv/')
+    profile_image = CloudinaryField('image', blank=True, null=True)
+    # profile_image = models.ImageField(upload_to='profile_images/')
+    cv = CloudinaryField('raw', folder='cv', blank=True, null=True)
+    # cv = models.FileField(upload_to='cv/')
     # contact = models.OneToOneField(ContactInfo, on_delete=models.CASCADE)
 
     class Meta:

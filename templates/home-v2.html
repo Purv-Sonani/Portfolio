@@ -91,6 +91,13 @@
                 <div class="col-lg-6">
                     <div class="cs_hero_image_box cs_filled_bg"
                          data-src="{% static 'img/bg/hero_bg_3.svg' %}">
+                        {% if profile.profile_image %}
+                        <div class="cs_imagebox_img w-100"><img src="{{ profile.profile_image.url }}"
+                                                                alt="P"></div>
+                        {% else %}
+                        <div class="cs_imagebox_img w-100"><img src="{% static 'img/hero_img.png' %}"
+                                                                alt="P"></div>
+                        {% endif %}
                         <div class="cs_imagebox_img w-100"><img src="{{ profile.profile_image.url }}"
                                                                 alt="P"></div>
                         <div
@@ -209,9 +216,9 @@
 
 <!-- Start Footer -->
 <footer class="cs_footer cs_style_1">
-<!--    <div class="position-absolute cs_footer_shape_1">-->
-<!--        <img src="{% static 'img/footer_shape.svg' %}" alt="">-->
-<!--    </div>-->
+    <!--    <div class="position-absolute cs_footer_shape_1">-->
+    <!--        <img src="{% static 'img/footer_shape.svg' %}" alt="">-->
+    <!--    </div>-->
     <div class="container">
         <div class="cs_footer_cta">
             <h2 class="cs_font_70 cs_gradient_text_2 cs_semi_bold">Have a project?</h2>
