@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Leckerli One
+- Font Title: Jost
 - Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/leckerlione/v21/V8mCoQH8VCsNttEnxnGQ-1itLZxcBtItFw.ttf
+- Font Source: https://fonts.gstatic.com/s/jost/v19/92zPtBhPNqw79Ij1E865zBUv7myRJQVGPokMmuHL.ttf
 - Font License: undefined)
