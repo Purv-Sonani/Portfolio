@@ -53,7 +53,8 @@ class Profile(SingletonModel):
 
 class About(SingletonModel):
     moto = models.CharField(max_length=255)
-    profile_image = models.ImageField(upload_to='about_images/')
+    profile_image = CloudinaryField('image', blank=True, null=True)
+    # profile_image = models.ImageField(upload_to='about_images/')
     location = models.CharField(max_length=100)
     education = models.CharField(max_length=255)
     interests = models.TextField()
