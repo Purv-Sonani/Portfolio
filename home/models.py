@@ -39,7 +39,8 @@ class Profile(SingletonModel):
     bio = models.TextField()
     profile_image = CloudinaryField('image', blank=True, null=True)
     # profile_image = models.ImageField(upload_to='profile_images/')
-    cv = CloudinaryField('raw', folder='cv', blank=True, null=True)
+    cv = models.URLField(blank=True, null=True)
+    # cv = CloudinaryField('raw', folder='cv', blank=True, null=True)
     # cv = models.FileField(upload_to='cv/')
     # contact = models.OneToOneField(ContactInfo, on_delete=models.CASCADE)
 
