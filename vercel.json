@@ -7,7 +7,7 @@
       "config": {
         "maxLambdaSize": "15mb",
         "runtime": "python3.12",
-        "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt && python3 manage.py collectstatic --noinput --clear" // Add buildCommand here
+        "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt && python3 manage.py collectstatic --noinput --clear"
       }
     }
   ],
