@@ -185,7 +185,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-ALLOWED_HOSTS = ['purvsonani.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['purvsonani.vercel.app', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -241,7 +241,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Database Configuration
 if 'DATABASE_URL' in os.environ:
-    DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
+    DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=False)}
 else:
     DATABASES = {
         'default': {
