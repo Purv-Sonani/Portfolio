@@ -7,14 +7,18 @@
       "config": {
         "maxLambdaSize": "15mb",
         "runtime": "python3.12",
-        "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt && python3 manage.py collectstatic --noinput --clear"
+        "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt && python manage.py collectstatic --noinput --clear"
       }
     }
   ],
   "routes": [
     {
-       "src": "/(.*)",
-       "dest": "portfolio/wsgi.py"
+      "src": "/static/(.*)",
+      "dest": "/staticfiles/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "portfolio/wsgi.py"
     }
   ]
 }
