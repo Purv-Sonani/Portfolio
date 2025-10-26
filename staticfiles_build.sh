@@ -4,7 +4,7 @@
 set -o errexit
 
 # Collect static files
-python manage.py collectstatic --noinput --clear
+python3 manage.py collectstatic --noinput --clear
 
 # Rename the output directory to match vercel.json config
 mv staticfiles staticfiles_build
