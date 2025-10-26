@@ -185,7 +185,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-ALLOWED_HOSTS = ['purvsonani.vercel.app','portfolio-kappa-six-28.vercel.app','portfolio-l7t0z4idw-purv-sonanis-projects.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'purvsonani.vercel.app',
+    'portfolio-kappa-six-28.vercel.app',
+    'portfolio-git-main-purv-sonanis-projects.vercel.app',
+    'portfolio-l7t0z4idw-purv-sonanis-projects.vercel.app',
+    'portfolio-3ymoxk20s-purv-sonanis-projects.vercel.app',
+    'localhost',
+    '127.0.0.1'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
