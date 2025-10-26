@@ -1,34 +1,16 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build"
-      },
-      "env": {
-        "PYTHON_VERSION": "3.12"
-      },
-      "command": "./build_vercel.sh"
-    },
-    {
-      "src": "portfolio/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.12"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/staticfiles_build/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "portfolio/wsgi.py"
-    }
-  ]
-}
+#!/bin/bash
+
+# Exit on error
+set -o errexit
+
+# Upgrade pip (Good practice)
+pip install --upgrade pip
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Collect static files
+python3 manage.py collectstatic --noinput --clear
+
+# Rename the output directory to match vercel.json config
+mv staticfiles staticfiles_build
