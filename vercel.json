@@ -1,14 +1,14 @@
 {
   "version": 2,
+  "env": {
+    "PYTHON_VERSION": "3.12"
+  },
   "builds": [
     {
       "src": "build_vercel.sh",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "staticfiles"
-      },
-      "env": {
-        "PYTHON_VERSION": "3.12"
       }
     },
     {
