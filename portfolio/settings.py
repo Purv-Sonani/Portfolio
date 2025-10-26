@@ -6,34 +6,21 @@ load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# =============================================================================
-# SECURITY & DEBUG
-# =============================================================================
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = [
-    'purvsonani.vercel.app',  # Your production domain
+    'purvsonani.vercel.app',
     'localhost',
     '127.0.0.1',
 ]
 
-# Handle dynamic preview/branch URLs on Vercel
+# Allow preview domains on Vercel
 VERCEL_DEPLOYMENT_URL = os.environ.get('VERCEL_URL')
 if VERCEL_DEPLOYMENT_URL:
-    hostname = VERCEL_DEPLOYMENT_URL.replace('https://', '')
-    ALLOWED_HOSTS.append(hostname)
+    ALLOWED_HOSTS.append(VERCEL_DEPLOYMENT_URL.replace('https://', '').replace('/', ''))
+ALLOWED_HOSTS = list(set(ALLOWED_HOSTS))
 
-VERCEL_BRANCH_URL = os.environ.get('VERCEL_BRANCH_URL')
-if VERCEL_BRANCH_URL:
-    branch_hostname = VERCEL_BRANCH_URL.replace('https://', '')
-    ALLOWED_HOSTS.append(branch_hostname)
-
-ALLOWED_HOSTS = list(set(ALLOWED_HOSTS))  # Remove duplicates
-
-# =============================================================================
-# APPLICATIONS
-# =============================================================================
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,15 +30,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
-    'home',  # your app
+    'home',
 ]
 
-# =============================================================================
-# MIDDLEWARE
-# =============================================================================
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # serves static files
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -60,9 +44,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# =============================================================================
-# URLS / TEMPLATES / WSGI
-# =============================================================================
 ROOT_URLCONF = 'portfolio.urls'
 
 TEMPLATES = [
@@ -83,9 +64,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
-# =============================================================================
-# DATABASE CONFIG
-# =============================================================================
+# Database
 if 'DATABASE_URL' in os.environ:
     DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=False)}
 else:
@@ -100,9 +79,6 @@ else:
         }
     }
 
-# =============================================================================
-# INTERNATIONALIZATION
-# =============================================================================
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
@@ -110,18 +86,15 @@ USE_L10N = True
 USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# =============================================================================
-# STATIC & MEDIA FILES
-# =============================================================================
+# STATIC FILES
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Use WhiteNoise for static file serving in production
 if not DEBUG:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Cloudinary configuration for media files
+# MEDIA (Cloudinary)
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
