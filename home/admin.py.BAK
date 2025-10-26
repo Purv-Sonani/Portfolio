@@ -1,0 +1,68 @@
+from django.contrib import admin
+from django import forms
+from django.utils.safestring import mark_safe
+from .models import Profile, ContactInfo, Project, About, Education, Skill, TechStack, Experience
+
+
+class SingletonAdmin(admin.ModelAdmin):
+    def has_add_permission(self, request):
+        return not self.model.objects.exists()
+
+    def has_delete_permission(self, request, obj=None):
+        return False  # Prevent deletion to ensure singleton behavior
+
+@admin.register(Profile)
+class ProfileAdmin(SingletonAdmin):
+    list_display = ['name', 'role']
+
+@admin.register(About)
+class AboutAdmin(SingletonAdmin):
+    list_display = ['moto', 'location']
+
+@admin.register(ContactInfo)
+class ContactInfoAdmin(SingletonAdmin):
+    list_display = ['email', 'github_url', 'linkedin_url', 'phone_number']
+
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    filter_horizontal = ('tech_stacks',)
+
+
+
+class ExperienceForm(forms.ModelForm):
+    class Meta:
+        model = Experience
+        fields = '__all__'
+        widgets = {
+            'start_date': forms.TextInput(attrs={'type': 'month'}),
+            'end_date': forms.TextInput(attrs={'type': 'month'}),
+        }
+
+    def clean_start_date(self):
+        start_date = self.cleaned_data.get('start_date')
+        if isinstance(start_date, str):
+            # convert "YYYY-MM" string to datetime.date
+            start_date = datetime.strptime(start_date, "%Y-%m").date()
+        return start_date
+
+    def clean_end_date(self):
+        end_date = self.cleaned_data.get('end_date')
+        if isinstance(end_date, str):
+            end_date = datetime.strptime(end_date, "%Y-%m").date()
+        return end_date
+    
+@admin.register(Experience)
+class ExperienceAdmin(admin.ModelAdmin):
+    form = ExperienceForm
+    list_display = ('company', 'role', 'duration')
+    # list_filter = ('company', 'start_date', 'end_date')
+    # search_fields = ('company', 'role')
+
+# admin.site.register(Profile)
+# admin.site.register(ContactInfo)
+# admin.site.register(Project)
+admin.site.register(TechStack)
+# admin.site.register(About)
+admin.site.register(Education)
+admin.site.register(Skill)
+
