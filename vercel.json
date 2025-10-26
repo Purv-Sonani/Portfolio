@@ -2,13 +2,19 @@
   "version": 2,
   "builds": [
     {
+      "src": "build_vercel.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles"
+      },
+      "env": {
+        "PYTHON_VERSION": "3.12"
+      }
+    },
+    {
       "src": "portfolio/wsgi.py",
       "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.12",
-        "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt && python3 manage.py collectstatic --noinput --clear"
-      }
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
     }
   ],
   "routes": [
