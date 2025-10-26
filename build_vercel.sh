@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# Exit on error
+# Exit immediately if a command exits with a non-zero status.
 set -o errexit
 
-# Install dependencies (Vercel might do this automatically, but explicit is safer)
-pip install -r requirements.txt
+# Upgrade pip (using python3 module execution)
+python3 -m pip install --upgrade pip
 
-# Collect static files into the 'staticfiles' directory
+# Install dependencies (using python3 module execution)
+python3 -m pip install -r requirements.txt
+
+# Collect static files
 python3 manage.py collectstatic --noinput --clear
