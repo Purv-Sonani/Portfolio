@@ -186,14 +186,25 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 ALLOWED_HOSTS = [
-    'purvsonani.vercel.app',
-    'portfolio-kappa-six-28.vercel.app',
-    'portfolio-git-main-purv-sonanis-projects.vercel.app',
-    'portfolio-l7t0z4idw-purv-sonanis-projects.vercel.app',
-    'portfolio-3ymoxk20s-purv-sonanis-projects.vercel.app',
+    'purvsonani.vercel.app',  # Your primary production domain
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
 ]
+
+VERCEL_DEPLOYMENT_URL = os.environ.get('VERCEL_URL')
+if VERCEL_DEPLOYMENT_URL:
+    # Extract hostname by removing 'https://'
+    hostname = VERCEL_DEPLOYMENT_URL.replace('https://', '')
+    ALLOWED_HOSTS.append(hostname)
+
+# You might also want to allow the branch-specific URL if you use preview branches
+VERCEL_BRANCH_URL = os.environ.get('VERCEL_BRANCH_URL')
+if VERCEL_BRANCH_URL:
+    branch_hostname = VERCEL_BRANCH_URL.replace('https://', '')
+    ALLOWED_HOSTS.append(branch_hostname)
+
+# Ensure no duplicates (optional but clean)
+ALLOWED_HOSTS = list(set(ALLOWED_HOSTS))
 
 INSTALLED_APPS = [
     'django.contrib.admin',
